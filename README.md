@@ -1,2 +1,2 @@
-# Techdegree-project-1
- JavaScript Project-1
+# Techdegree project 1
+ JavaScript-Project-1
