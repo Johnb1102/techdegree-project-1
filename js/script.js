@@ -15,33 +15,33 @@ let quotes=[
 
   {
     quote: "I was born to dictate, never follow orders",
-    name: "Jay-Z",
+    source: "Jay-Z",
     song: "U Don't Know",
     year: 2001,
   },
 
   {
     quote: "A man that don't take care his family can't be rich",
-    name: "Jay-Z",
+    source: "Jay-Z",
     song: "Family Feud",
     year: 2017,
   },
 
   {
     quote: "Generational wealth, that's the key",
-    name: "Jay-Z",
+    source: "Jay-Z",
     song: "Legacy",
     year: 2017,
   },
   {
     quote: "Nobody built like you, you design yourself",
-    name: "Jay-Z",
+    source: "Jay-Z",
     song: "A Dream",
     year: 2002,
   },
   {
     quote: "Standing back from situations, gives you the perfect view",
-    name: "Jay-Z",
+    source: "Jay-Z",
     song: "Anything",
     year: 1999,
   },
@@ -70,13 +70,27 @@ return quotes [randomNumber];
 
 function printQuote() {
  
+  let message = "";   
+  let outCome = getRandomQuote(quotes);
+  message = "<p class='quote'>" + outCome.quote + "</p>";
+  message += "<p class='source'>" + outCome.source; 
+  message += "<span class='song'>, " + outCome.song + "</span>";
+  message += "<span class='year'>" + outCome.year + "</span>"
+  message += "</p>";
 
-}
+  
+  document.getElementById('quote-box').innerHTML = message; 
+   
+  }
+
+  printQuote();
 
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+  /***
+  * click event listener for the print quote button
+  * DO NOT CHANGE THE CODE BELOW!!
+  ***/
+
+  document.getElementById('load-quote').addEventListener("click", printQuote, false);
